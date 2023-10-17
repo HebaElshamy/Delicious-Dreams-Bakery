@@ -1,0 +1,687 @@
+@font-face {
+    font-family: 'Scriptina';
+    src: url("../fonts/scriptina-regular.ttf");
+  }
+  
+  @font-face {
+    font-family: 'Proxima Nova';
+    src: url("../fonts/proximaNova-regular.ttf");
+  }
+  
+  *,
+  *::after,
+  *::before {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    background: #fff;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header.hero {
+    background: radial-gradient(circle, rgba(86,83,76,0.5), transparent),
+    url("../images/hero5.jpg") no-repeat center center / cover;
+    color: #fff;
+    position: relative;
+  }
+  
+  nav,
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header nav {
+    padding: 0 10%;
+    background: rgba(86,83,76,.5);
+  }
+  
+  .main-nav li a {
+    font-family: 'Alegreya', serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .main-nav a:hover {
+    color: #deceb6;
+  }
+  
+  .social-media li a:hover {
+    color: #deceb6;
+  }
+  
+  .logo {
+    margin-top: -17px;
+    font-family: Scriptina;
+    font-size: 30px;
+  }
+  
+  header nav .main-nav {
+    width: 60%;
+  }
+  
+  /* ~ SEPARATORS IN NAVIGATION (except last) ~ */
+  .main-nav li:not(:last-of-type) {
+    flex: 1 1 auto;
+    display: flex;
+  }
+  
+  .main-nav li:not(:last-of-type)::after {
+    content: '~';
+    flex: 1 1 auto;
+    text-align: center;
+  }
+  
+  .social-media {
+    width: 10%;
+  }
+  
+  /* VERTICAL NAVIGATION <950px */
+  @media screen and (max-width: 950px) {
+    nav {
+      flex-direction: column;
+      position: relative;
+    }
+    .main-nav {
+      flex-direction: column;
+      margin-bottom: 10px;
+    }
+    .social-media {
+      height: 100%;
+      position: absolute;
+      right: 5%;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+    .main-nav li::after, .main-nav li::before {
+      content: '~';
+    }
+  }
+  
+  .intro {
+    text-align: center;
+    overflow: auto;
+  }
+  
+  .intro h1 {
+    margin: 150px 0 0 0;
+    font-size: 5rem;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 5px;
+    text-shadow: 0 0 5px rgba(86,83,76,.7);
+  }
+  
+  .intro img {
+    margin: 50px 0;
+  }
+  
+  .intro p {
+    max-width: 450px;
+    margin: 0 auto;
+    font-family: 'Proxima Nova';
+    font-size: 1.5rem;
+    text-shadow: 0 0 5px rgba(86,83,76,.7);
+  }
+  
+  .button {
+    width: 200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px auto 200px auto;
+    background: rgba(86,83,76,.5);
+    font-family: 'Alegreya', serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    transition: .5s;
+  }
+  
+  .button:hover {
+    background: #fff;
+    border: 1px solid rgb(86,83,76);
+    color: #a47d5e;
+    font-weight: bold;
+  }
+  
+  .bread-icon {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, #fff 50%, transparent 0);
+  }
+  
+  /* ART OF CAKES */
+  .art-of-cakes {
+    width: 80%;
+    margin: 0 auto;
+    padding: 100px 0;
+    display: flex;
+    text-align: center;
+  }
+  
+  .text {
+    width: 50%;
+    padding: 0 5%;
+    color: #56534c;
+    font-family: 'Alegreya', serif;
+  }
+  
+  .text h1 {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  .text h2 {
+    margin: 0;
+    font-size: 16px;
+    color: #a47d5e;
+    text-transform: uppercase;
+  }
+  
+  .desc {
+    font-family: 'Proxima Nova';
+  }
+  
+  .art-of-cakes .text .desc,
+  .pancakes .text .desc {
+    margin: 50px 0;
+  }
+  
+  p.job {
+    font-family: 'Alegreya', serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .person {
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+  
+  .person p {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #d9d8d0;
+    border-bottom: 1px solid #d9d8d0;
+    font-size: 1.5rem;
+  }
+  
+  @media screen and (max-width: 500px) {
+    .person {
+      display: block;
+    }
+  }
+  
+  blockquote {
+    width: 80%;
+    max-width: 350px;
+    margin: 20px auto;
+    padding: 20px 50px;
+    position: relative;
+    font-family: Scriptina;
+    color: #a47d5e;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  
+  blockquote::before {
+     content: "\201C";
+     position: absolute;
+     left: 0;
+     top: 0;
+     color: #c2c2c0;
+     font-size: 5rem;
+  }
+  
+  blockquote::after {
+     content: "\201D";
+     position: absolute;
+     right: 0;
+     top: 0;
+     color: #c2c2c0;
+     font-size: 5rem;
+  
+  }
+  
+  .images {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    position: relative;
+  }
+  
+  .images img {
+    width: 49%;
+  }
+  
+  .wavy-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+  }
+  
+  .images h1 {
+    width: 30%;
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    font-size: 30px;
+    color: #a47d5e;
+    font-weight: normal;
+  }
+  
+  @media screen and (max-width: 550px) {
+    .images h1 {
+      font-size: 20px;
+    }
+    .art-of-cakes {
+      width: 100%;
+    }
+  }
+  
+  @media screen and (max-width: 1100px){
+    .art-of-cakes, .images {
+      display: block;
+    }
+    .art-of-cakes .text, .images {
+      width: 100%;
+    }
+  }
+  
+  /* PANCAKES */
+  .pancakes {
+    background: url("../images/bg-slides2.jpg") no-repeat center center / cover;
+    overflow: auto;
+  }
+  
+  .panel {
+    display: flex;
+    width: 70%;
+    margin: 120px auto;
+    background: url("../images/mill.png") no-repeat right bottom,
+                #fff;
+    position: relative;
+  }
+  
+  .panel .text {
+    margin-top: 50px;
+  }
+  
+  .img-rate {
+    width: 45%;
+    background: url("../images/pancakes.jpg") no-repeat center center;
+    display: flex;
+    align-items: center;
+  }
+  
+  fieldset {
+    border: none;
+    margin: 40px 20px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  fieldset input {
+    display: none;
+  }
+  
+  fieldset label::before {
+    content: "\2605";
+    font-size: 2.5rem;
+  }
+  
+  fieldset label {
+    color: #fff;
+  }
+  
+  fieldset input:checked ~ label,
+  fieldset:not(:checked) label:hover,
+  fieldset:not(:checked) label:hover ~ label {
+    color: #FFED85;
+  }
+  
+  .steps {
+    display: flex;
+    justify-content: space-around;
+    margin: 100px 0 50px 0;
+  }
+  
+  .steps img {
+    transition: .5s;
+  }
+  
+  .steps img:hover {
+    transform: scale(1.05);
+  }
+  
+  .ready-in {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    padding: 20px 0;
+    background: url("../images/field.png"),
+                #fff;
+    transform: translate(60%, -20%);
+    font-family: 'Alegreya', serif;
+    text-align: center;
+    box-shadow: 0px 10px 100px 0px rgba(0,0,0,.3);
+  }
+  
+  .ready-in h1 {
+    font-size: 1.5rem;
+    color: #a47d5e;
+    margin: 0;
+  }
+  
+  .ready-in p {
+    font-size: 5rem;
+    color: #dfc691;
+    margin: 0;
+  }
+  
+  .ready-in span {
+    color: #979285;
+    font-weight: bold;
+  }
+  
+  @media screen and (max-width: 900px) {
+    .panel {
+      flex-wrap: wrap;
+    }
+    .img-rate, .panel .text {
+      width: 100%;
+    }
+    .ready-in {
+      transform: translate(0,0);
+    }
+  }
+  
+  @media screen and (max-width: 550px) {
+    .panel {
+      width: 100%;
+      margin: 0;
+    }
+  }
+  
+  /* BREAKFAST */
+  .breakfast {
+    padding: 100px 10%;
+    display: flex;
+    justify-content: space-between;
+    background: url("../images/breakfast.jpg") no-repeat center center / cover;
+  }
+  
+  .breakfast .text {
+    text-align: center;
+  }
+  
+  .breakfast .text:first-child h1 {
+    color: #fff;
+  }
+  
+  .breakfast .text h2 {
+    color: #c8a593;
+    margin-bottom: 50px;
+  }
+  
+  .bf-type {
+    margin-top: 30px;
+  }
+  
+  .bf-type h1 {
+    font-size: 2rem;
+  }
+  
+  .bf-type p {
+    color: #c2beba;
+    margin-top: 0;
+  }
+  
+  .bf-type span {
+    color: #dfc691;
+    font-size: 2rem;
+  }
+  
+  article.text {
+    width: 40%;
+    padding: 50px 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: url(../images/article-top-bg.png) no-repeat center 50px,
+                url(../images/rye.png) no-repeat center center,
+                #fff;
+    position: relative;
+  }
+  
+  article.text p {
+    margin: 30px 0 40px 0;
+  }
+  
+  article.text .button {
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  article.text h1::before {
+    content: "EST.";
+    position: absolute;
+    top: 40px;
+    left: 25%;
+    font-size: 14px;
+  }
+  
+  article.text h1::after {
+    content: "1893";
+    position: absolute;
+    top: 40px;
+    right: 25%;
+    font-size: 14px;
+  }
+  
+  article.text::before {/* dashed-inside-border */
+    content: '';
+    position: absolute;
+    width: 96%;
+    height: 96%;
+    top: 2%;
+    left: 2%;
+    border: 2px dashed #9e9c93;
+    background: transparent;
+  }
+  
+  article.text::after {/* 1 hiding panel */
+    content: '';
+    width: 3%;
+    height: 90%;
+    position: absolute;
+    top: 5%;
+    left: 100%;
+    background: #d9d6c8;
+  }
+  
+  article.text p::after {/* 2 hiding panel */
+    content: '';
+    width: 3%;
+    height: 80%;
+    position: absolute;
+    top: 10%;
+    left: 103%;
+    background: #c1beb3;
+  }
+  
+  @media screen and (max-width: 1100px) {
+    .breakfast {
+      padding: 100px 6% 100px 0;
+    }
+    article.text {
+      width: 50%;
+    }
+  }
+  
+  @media  screen and (max-width: 600px) {
+    .breakfast {
+      flex-direction: column;
+      align-items: center;
+      padding: 100px 0;
+    }
+    .breakfast .text{
+      width: 80%;
+    }
+    article.text {
+      margin-top: 50px;
+      height: 650px;
+    }
+  }
+  
+  /* The The Jibarito sandwich RECIPE */
+  .recipe {
+    padding: 0 10%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background: #f3f1e9;
+  }
+  
+  .recipe header.text {
+    width: 100%;
+    text-align: center;
+    padding-top: 100px;
+    background: url("../images/mill-small.png") no-repeat center 10px;
+  }
+  
+  .recipe-steps {
+    width: 25%;
+  }
+  
+  .recipe-steps .text {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .recipe-steps .text h1 {
+    font-size: 2rem;
+    color: #a47d5e;
+  }
+  
+  .recipe-img {
+    position: relative;
+    width: 63%;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    box-shadow: 0 0 20px 10px #e8e4d5;
+    background: url("../images/sandwich-bg.jpg") no-repeat center center / cover;
+    border: 10px solid #fff;
+  }
+  
+  .recipe-img .ready-in {
+    position: relative;
+    transform: translate(0,-20%);
+    box-shadow: none;
+    background: rgba(255,255,255,.9);
+  }
+  .recipe-img .ready-in:hover {
+    background: url("../images/field.png"),
+                #fff;
+  }
+  
+  .recipe-img .button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .recipe {
+      flex-direction: column;
+    }
+    .recipe-img {
+      width: 100%;
+    }
+    .recipe-steps {
+      width: 100%;
+      display: flex;
+      margin-top: 50px;
+    }
+  }
+  
+  @media screen and (max-width: 750px) {
+    .recipe-steps {
+      flex-direction: column;
+      width: 50%;
+    }
+    .recipe-img .button {
+      transform: rotate(-90deg);
+      transform-origin: 0 0;
+    }
+  }
+  
+  /* FOOTER */
+  footer {
+    padding: 70px 10%;
+    background: #f3f1e9;
+  }
+  
+  footer a {
+    color: #35332f;
+  }
+  
+  footer .main-nav a:hover {
+    color: #a47d5e;
+  }
+  
+  footer nav .main-nav {
+    width: 100%;
+    height: 70px;
+    padding: 0 20px;
+    border-top: 1px solid #c2beba;
+    border-bottom: 1px solid #c2beba;
+  }
+  
+  footer .logo {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  
+  @media screen and (max-width: 950px) {
+    footer nav .main-nav {
+      border: none;
+    }
+  }
+  
+  
